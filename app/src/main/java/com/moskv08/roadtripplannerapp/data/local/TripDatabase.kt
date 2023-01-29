@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     version = 1, // Increase number when updating definition
-    entities = [TripEntity::class, TripLocationEntity::class, LocationActivityEntity::class, CountryEntity::class],
+    entities = [TripEntity::class, LocationEntity::class, ActivityEntity::class, CountryEntity::class],
     autoMigrations = [
         // AutoMigration(from = 3, to = 4)
     ],
