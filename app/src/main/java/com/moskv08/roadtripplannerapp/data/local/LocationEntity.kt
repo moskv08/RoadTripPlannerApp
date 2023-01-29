@@ -11,18 +11,12 @@ import androidx.room.PrimaryKey
         entity = TripEntity::class,
         childColumns = ["trip_id"],
         parentColumns = ["id"]
-    ),
-        ForeignKey(
-            entity = CountryEntity::class,
-            childColumns = ["country_id"],
-            parentColumns = ["id"]
-        )
-    ]
+    )]
 )
-data class TripLocationEntity(
+data class LocationEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "description") val description: String?,
     @ColumnInfo(name = "trip_id") val tripId: Long,
-    @ColumnInfo(name = "country_id") val countryId: Long
+    @ColumnInfo(name = "country") val country: String
 )

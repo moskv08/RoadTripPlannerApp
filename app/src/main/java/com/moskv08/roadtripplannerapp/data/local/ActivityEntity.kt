@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Activity")
-data class LocationActivityEntity(
+data class ActivityEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "name")val name: String?,
     @ColumnInfo(name = "description")val description: String?,
